@@ -10,6 +10,8 @@ endif
 call plug#begin()
 
 " plugins here
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'glepnir/lspsaga.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'machakann/vim-sandwich'
 Plug 'tpope/vim-fugitive'
@@ -17,6 +19,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'yggdroot/indentline'
+Plug 'dense-analysis/ale'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -64,3 +69,5 @@ nnoremap <C-up> <C-W><C-J>
 nnoremap <C-down> <C-W><C-K>
 nnoremap <C-right> <C-W><C-L>
 nnoremap <C-left> <C-W><C-H>
+
+let g:indentLine_char = '⦙'

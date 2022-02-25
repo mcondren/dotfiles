@@ -125,7 +125,7 @@ export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_CTRL_T_OPTS="--exact --preview 'bat --style numbers,changes --color=always {} | head -500'"
 export FZF_ALT_C_COMMAND='find / -type d'
 export FZF_ALT_C_OPTS='--exact'
-export BAT_THEME='gruvbox'
+export BAT_THEME='gruvbox-dark'
 export BAT_PAGER="less -R -E -X -F"
 
 #
