@@ -17,7 +17,7 @@ AUTO_LS_COMMANDS=("/usr/bin/ls -Fa --color=always")
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # PLUGINS
-plugins=(vi-mode fzf ssh-agent gitfast dirhistory docker docker-compose history-substring-search rsync thefuck sudo zoxide)
+plugins=(vi-mode fzf ssh-agent gitfast dirhistory docker docker-compose history-substring-search rsync sudo zoxide)
 
 source $ZSH/oh-my-zsh.sh
 
