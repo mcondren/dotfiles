@@ -38,7 +38,7 @@ alias vimrc="nvim ~/.config/nvim/init.vim"
 #alias lsof="lsof -nP -iTCP -sTCP:LISTEN"
 alias grep="rg --smart-case -uu"
 alias dock="cd ~/docker/"
-alias du="duf"
+alias du="duf --hide special"
 alias fstab="vi /etc/fstab"
 alias sources="vi /etc/apt/sources.list"
 
