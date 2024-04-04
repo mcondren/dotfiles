@@ -30,7 +30,7 @@ alias ~="cd ~"
 alias ls="exa -alFG --sort=name --color=always"
 alias l="exa -alF --sort=name --color=always|bat"
 alias dv="cd /var/lib/docker/volumes/"
-alias dc="docker-compose"
+alias dc="docker compose"
 alias cat="bat"
 alias top="btop"
 alias zshrc='nvim ~/.config/zsh/.zshrc'
