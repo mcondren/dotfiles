@@ -11,10 +11,10 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 #Add Cargo to system PATH
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.fzf/bin:$HOME/.cargo/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.fzf/bin:$HOME/.cargo/bin:/opt/homebrew/bin
 
 AUTO_LS_COMMANDS=("/usr/bin/ls -Fa --color=always")
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="agnoster" # set by `omz`
 
 # PLUGINS
 plugins=(vi-mode fzf ssh-agent gitfast dirhistory docker docker-compose history-substring-search rsync sudo zoxide)
@@ -27,8 +27,8 @@ source $ZSH/oh-my-zsh.sh
 alias fs="df -h | rg -v /var/lib/docker"
 alias vi="nvim"
 alias ~="cd ~"
-alias ls="exa -alFG --sort=name --color=always"
-alias l="exa -alF --sort=name --color=always|bat"
+alias ls="eza -alF --sort=name --color=always"
+alias l="eza -alF --sort=name --color=always|bat"
 alias dv="cd /var/lib/docker/volumes/"
 alias dc="docker compose"
 alias cat="bat"
@@ -132,7 +132,7 @@ export BAT_PAGER="less -R -E -X -F"
 
  #To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
  #
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+#[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 #set ssh_auth_sock so cron can use it by calling this file and creating a var in crontab
 test $SSH_AUTH_SOCK && ln -sf "$SSH_AUTH_SOCK" "/tmp/ssh-agent-$USER-cron"
