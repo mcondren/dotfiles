@@ -1,0 +1,11 @@
+theme = "gruvbox_dark_hard"
+
+[editor]
+line-number = "absolute"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.file-picker]
+hidden = true
