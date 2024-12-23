@@ -21,9 +21,12 @@ alias fs="df -h | rg -v /var/lib/docker"
 case "$OSTYPE" in
   darwin*)
     alias vi="kitten @ launch --type tab hx"
+    alias zshrc="kitten @ launch --type tab hx ~/.config/zsh/.zshrc"
+    alias ssh="kitten ssh"
   ;;
   linux*)
     alias vi="hx"
+    alias zshrc="hz ~/.config/zsh/.zshrc"
   ;;
 esac
 alias ~="cd ~"
@@ -33,13 +36,11 @@ alias dv="cd /var/lib/docker/volumes/"
 alias dc="docker compose"
 alias cat="bat"
 alias top="btop"
-alias zshrc='kitten @ launch --type tab hx ~/.config/zsh/.zshrc'
 alias grep="rg --smart-case -uu"
 alias dock="cd ~/docker/"
 alias du="duf --hide special"
 alias fstab="vi /etc/fstab"
 alias sources="vi /etc/apt/sources.list"
-alias ssh="kitten ssh"
 
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000000
