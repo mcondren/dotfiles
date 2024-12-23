@@ -18,7 +18,14 @@ source $ZSH/oh-my-zsh.sh
 
 # Shortcuts
 alias fs="df -h | rg -v /var/lib/docker"
-alias vi="kitten @ launch --type tab hx"
+case "$OSTYPE" in
+  darwin*)
+    alias vi="kitten @ launch --type tab hx"
+  ;;
+  linux*)
+    alias vi="hx"
+  ;;
+esac
 alias ~="cd ~"
 alias ls="eza -alF --sort=name --color=always"
 alias l="eza -alF --sort=name --color=always|bat"
@@ -32,6 +39,7 @@ alias dock="cd ~/docker/"
 alias du="duf --hide special"
 alias fstab="vi /etc/fstab"
 alias sources="vi /etc/apt/sources.list"
+alias ssh="kitten ssh"
 
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000000000
@@ -68,13 +76,14 @@ function mkd() {
 
 #New line afer command execution
 precmd() { print "" }   
-export FZF_DEFAULT_COMMAND='rg / --files --hidden --files-with-matches --fixed-strings'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --files-with-matches --fixed-strings --ignore-case /'
 export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 export FZF_CTRL_T_OPTS="--exact --preview 'bat --style numbers,changes --color=always {} | head -500'"
-export FZF_ALT_C_COMMAND='find / -type d'
+export FZF_ALT_C_COMMAND='find ~ -type d'
 export FZF_ALT_C_OPTS='--exact'
 export BAT_THEME='gruvbox-dark'
 export BAT_PAGER="less -R -E -X -F"
 
 #set ssh_auth_sock so cron can use it by calling this file and creating a var in crontab
 test $SSH_AUTH_SOCK && ln -sf "$SSH_AUTH_SOCK" "/tmp/ssh-agent-$USER-cron"
+bindkey "ç" fzf-cd-widget
