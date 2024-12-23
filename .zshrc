@@ -26,7 +26,7 @@ case "$OSTYPE" in
   ;;
   linux*)
     alias vi="hx"
-    alias zshrc="hz ~/.config/zsh/.zshrc"
+    alias zshrc="hx ~/.config/zsh/.zshrc"
   ;;
 esac
 alias ~="cd ~"
