@@ -20,13 +20,13 @@ source $ZSH/oh-my-zsh.sh
 alias fs="df -h | rg -v /var/lib/docker"
 case "$OSTYPE" in
   darwin*)
-    alias vi="kitten @ launch --type tab hx"
-    alias zshrc="kitten @ launch --type tab hx ~/.config/zsh/.zshrc"
+    alias vi="zed"
+    alias zshrc="zed ~/.config/zsh/.zshrc"
     alias ssh="kitten ssh"
   ;;
   linux*)
-    alias vi="hx"
-    alias zshrc="hx ~/.config/zsh/.zshrc"
+    alias vi="nvim"
+    alias zshrc="nvim ~/.config/zsh/.zshrc"
   ;;
 esac
 alias ~="cd ~"
@@ -38,7 +38,7 @@ alias cat="bat"
 alias top="btop"
 alias grep="rg --smart-case -uu"
 alias dock="cd ~/docker/"
-alias du="duf --hide special"
+#alias du="duf --hide special"
 alias fstab="vi /etc/fstab"
 alias sources="vi /etc/apt/sources.list"
 
