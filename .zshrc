@@ -20,8 +20,8 @@ source $ZSH/oh-my-zsh.sh
 alias fs="df -h | rg -v /var/lib/docker"
 case "$OSTYPE" in
   darwin*)
-    alias vi="kitten nvim"
-    alias zshrc="kitten nvim ~/.config/zsh/.zshrc"
+    alias vi="nvim"
+    alias zshrc="nvim ~/.config/zsh/.zshrc"
     alias ssh="kitten ssh"
   ;;
   linux*)
