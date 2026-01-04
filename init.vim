@@ -34,7 +34,6 @@ set showmatch
 set ignorecase
 set smartcase
 set gdefault
-set clipboard=unnamedplus
 
 " show a few lines below the current line
 set scrolloff=3
@@ -75,3 +74,27 @@ nnoremap <D-v> "+p
 inoremap <D-v> <C-r>+
 
 let g:indentLine_char = '⦙'
+
+" Use system clipboard by default everywhere
+set clipboard=unnamedplus
+
+" Only enable OSC 52 on remote Debian/Linux over SSH
+if has('unix') && !has('mac') && !empty($SSH_CONNECTION)
+  " Start a Lua block safely
+  lua << EOF
+local osc52 = require('vim.ui.clipboard.osc52')
+
+vim.g.clipboard = {
+  name = 'OSC 52',
+  copy = {
+    ['+'] = osc52.copy('+'),
+    ['*'] = osc52.copy('*'),
+  },
+  paste = {
+    ['+'] = osc52.paste('+'),
+    ['*'] = osc52.paste('*'),
+  },
+}
+EOF
+endif
+
