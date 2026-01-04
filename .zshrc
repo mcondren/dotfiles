@@ -70,9 +70,9 @@ function mkd() {
 # ENV
 # Preferred editor for local and remote sessions
   if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='hx'
+    export EDITOR='nvim'
   else
-    export EDITOR='hx'
+    export EDITOR='nvim'
   fi
 
 #New line afer command execution
