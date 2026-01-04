@@ -10,26 +10,22 @@ endif
 call plug#begin()
 
 " plugins here
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'glepnir/lspsaga.nvim'
-Plug 'jiangmiao/auto-pairs'
-Plug 'machakann/vim-sandwich'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
 Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'yggdroot/indentline'
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-commentary'
-
 call plug#end()
 
 autocmd vimenter * colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 
 " Tabs and spaces
-autocmd VimEnter * AirlineRefresh
+"autocmd VimEnter * AirlineRefresh
 
 set tabstop=2 softtabstop=2 shiftwidth=2 expandtab autoindent
 " aesthetic

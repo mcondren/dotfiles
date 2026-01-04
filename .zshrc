@@ -4,7 +4,7 @@ zstyle :omz:plugins:ssh-agent identities github id_rsa
 export ZSH="$HOME/.oh-my-zsh"
 
 #Add Cargo to system PATH
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.fzf/bin:$HOME/.cargo/bin:/opt/homebrew/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$HOME/.fzf/bin:$HOME/.cargo/bin:/opt/homebrew/bin:$HOME/.local/bin
 
 AUTO_LS_COMMANDS=("/usr/bin/ls -Fa --color=always")
 ZSH_THEME="agnoster" # set by `omz`
@@ -20,8 +20,8 @@ source $ZSH/oh-my-zsh.sh
 alias fs="df -h | rg -v /var/lib/docker"
 case "$OSTYPE" in
   darwin*)
-    alias vi="zed"
-    alias zshrc="zed ~/.config/zsh/.zshrc"
+    alias vi="kitten nvim"
+    alias zshrc="kitten nvim ~/.config/zsh/.zshrc"
     alias ssh="kitten ssh"
   ;;
   linux*)
