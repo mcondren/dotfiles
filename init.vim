@@ -34,6 +34,7 @@ set showmatch
 set ignorecase
 set smartcase
 set gdefault
+set clipboard=unnamedplus
 
 " show a few lines below the current line
 set scrolloff=3
@@ -65,5 +66,12 @@ nnoremap <C-up> <C-W><C-J>
 nnoremap <C-down> <C-W><C-K>
 nnoremap <C-right> <C-W><C-L>
 nnoremap <C-left> <C-W><C-H>
+
+" Copy visual selection to system clipboard
+vnoremap <D-c> "+y
+
+" Paste from system clipboard
+nnoremap <D-v> "+p
+inoremap <D-v> <C-r>+
 
 let g:indentLine_char = '⦙'
