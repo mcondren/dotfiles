@@ -22,7 +22,6 @@ case "$OSTYPE" in
   darwin*)
     alias vi="nvim"
     alias zshrc="nvim ~/.config/zsh/.zshrc"
-    alias ssh="kitten ssh"
   ;;
   linux*)
     alias vi="nvim"
